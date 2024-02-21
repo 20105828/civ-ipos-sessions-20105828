@@ -15,8 +15,13 @@ def create_product_lookup_table(product_codes, product_info):
             value = product_info[i][j]
             # Add the key-value pair to the lookup table
             look_up_table[key] = value
-    # Return the completed lookup table
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> a439e0eaefb230a6fbd576535ddd10d1512dee3f
+    # Return the completed lookup table
+    return look_up_table
 
 # Create two 2D lists for product codes and product info
 product_codes = [['P1001', 'P1002'], ['P1003', 'P1004']]
