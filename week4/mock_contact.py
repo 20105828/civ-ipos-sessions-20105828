@@ -6,7 +6,7 @@ class Contact:
         self.address = address
         self.billing_details = billing_details
 
-def get_contact_info(name);
+def get_contact_info(name):
     pass
 
 def test_get_contact_info():
