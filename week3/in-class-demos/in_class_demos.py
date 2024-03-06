@@ -88,6 +88,7 @@ def make_2d_cool(rows, cols, value=None):
 
     # Example 3
 <<<<<<< HEAD
+<<<<<<< HEAD
     #two_dim_list = [[(i+1)*(j+1) for j in range(cols) for i in range(rows)]]
 
     # # Example 4
@@ -98,6 +99,9 @@ def make_2d_cool(rows, cols, value=None):
     print(two_dim_list)
 =======
     two_dim_list =  [[(i+1)*(j+1) for j in range(cols) for i in range(rows)]]
+=======
+    two_dim_list =  [[(i+1)*(j+1) for j in range(cols)] for i in range(rows)]
+>>>>>>> c6b2950fab9927139dfd98f6fc5e8de2ee25b2f7
 
     # # Example 4
     # w, h = 3, 3
