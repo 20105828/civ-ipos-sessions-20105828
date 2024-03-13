@@ -14,6 +14,15 @@ def generate_random_number(n):
 
 def compare_guess_to_number(guess, target) -> Clue:
     # implement me
+    if guess < target:
+        print(Clue.LOWER)
+    elif guess > target:
+        print(Clue.HIGHER)
+    elif guess == target:
+       print(Clue.MATCH)
+    else:
+        print("Your guess is invalid!")
+
     pass
 
 def play_round(lowest, highest, number):
