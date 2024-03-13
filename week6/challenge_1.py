@@ -15,6 +15,7 @@ def generate_random_number(n):
 def compare_guess_to_number(guess, target) -> Clue:
     # implement me
     if guess < target:
+<<<<<<< HEAD
         print(Clue.LOWER)
     elif guess > target:
         print(Clue.HIGHER)
@@ -24,6 +25,13 @@ def compare_guess_to_number(guess, target) -> Clue:
         print("Your guess is invalid!")
 
     pass
+=======
+        return Clue.HIGHER
+    elif guess > target:
+        return Clue.LOWER
+    else:
+        return Clue.MATCH
+>>>>>>> bfa90d2f040985f6ae195e6587857043ba2b3376
 
 def play_round(lowest, highest, number):
     tries = 1
@@ -31,6 +39,7 @@ def play_round(lowest, highest, number):
         print("Attempt:", tries)
         print(f"Suggestions {(lowest + highest)//2}")
         guess = int(input(f'{lowest}-{highest}> '))
+
         result = compare_guess_to_number(guess, number)
         if result == Clue.HIGHER:
             lowest = guess + 1
