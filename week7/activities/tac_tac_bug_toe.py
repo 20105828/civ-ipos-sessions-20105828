@@ -8,14 +8,58 @@ board = [[' ' for _ in range(3)] for _ in range(3)]
 
 
 def print_board():
+    """
+    Prints the game board
+    
+    Parameters
+    ----------
+    row : list of strings
+        This contains the rows for the game board.
+    board : list of lists that contains strings
+        This is the game board.
+    
+    Examples
+    ----------
+    >>> print_board()
+     | |
+    -----
+     | | 
+    -----
+     | | 
+    -----
+    """
     for row in board:
-     
         print('|'.join(row))
         print('-' * 5)
 
 
 def is_win(player):
-    '''Check rows, columns, and diagonals for win condition for a given player'''
+    '''
+    Checks rows, columns, and diagonals for win conditions for a given player
+
+    Parameters
+    ----------
+    i : int
+        Default variable for the for loop.
+    j : int
+        Default variable for the columns if statement.
+    cell : str
+        A position on the game board .
+    player : any
+        One of the players(X/O).
+    board : list of lists that contains strings
+        This is the game board.
+    
+    Returns
+    ----------
+    True/False : boolean
+        Returns True or False depending on the if statements.
+
+    Examples
+    ----------
+    >>> is_win()
+    
+    '''
     for i in range(3):
         if all([cell == player for cell in board[i]]):  # Rows
             return False 
@@ -28,12 +72,74 @@ def is_win(player):
 
 
 def tally_wins(results):
-    # Leveraging the fact that in Python: True = 1 and False = 0 
-    # we can use sum() to count the number of wins by counting all Trues and Falses
+    """
+    Leveraging the fact that in Python: True = 1 and False = 0 
+    we can use sum() to count the number of wins by counting all Trues and Falses
+
+    Parameters
+    ----------
+    results : any
+        Contains the results of all the games won.
+    
+    Returns
+    ----------
+    results : any
+        Returns the results variable.
+    
+    Examples
+    ----------
+
+    """
     return sum(results)
 
 
 def main():
+    """
+    The main logic of the game.
+
+    Parameters
+    ----------
+    current_player : string
+        Is the current player.
+    moves : int
+        Contains how many moves/turns have been played.
+    results : list
+        Contains the results of the game in a list.
+    row : int
+        Contains the rows of the game board.
+    col : int
+        Contains the columns of the game board.
+    board : list of lists that contains strings.
+        This is the game board
+    win : bool
+        Uses the is_win() function to check if the current player
+        has won the game.
+    
+    Examples
+    ----------
+    >>> main()
+     | | 
+    -----
+     | | 
+    -----
+     | | 
+    -----
+    Player X, enter row and column (0-2) separated by space: 0 0
+    X| | 
+    -----
+     | | 
+    -----
+     | | 
+    -----
+    Player O, enter row and column (0-2) separated by space: 2 2
+    X| | 
+    -----
+     | | 
+    -----
+     | |O
+    -----
+    Player X, enter row and column (0-2) separated by space: 
+    """
     current_player = 'X'
     moves = 0
     results = []
